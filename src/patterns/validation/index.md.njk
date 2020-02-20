@@ -27,9 +27,9 @@ Do not show validation error messages if the user isn’t eligible to use the se
 
 There are separate patterns for:
 
-+ [‘there is a problem with the service’ pages](/../patterns/problem-with-the-service-pages/)
-+ [‘page not found’ pages](/../patterns/page-not-found-pages/)
-+ [‘service unavailable’ pages](/../patterns/service-unavailable-pages/)
++ [‘there is a problem with the service’ pages](../problem-with-the-service-pages)
++ [‘page not found’ pages](../page-not-found-pages)
++ [‘service unavailable’ pages](../service-unavailable-pages)
 
 ## How it works
 
@@ -37,7 +37,7 @@ Validation should refuse to accept:
 
 + information that can’t be correct
 + information that’s too ambiguous for you to use
-+ missing information, it the information is required
++ missing information, if the information is required
 
 For example, if you’re asking for someone’s date of birth you shouldn’t accept ‘13’ in the month field.
 
@@ -47,10 +47,10 @@ If the user's answers fail validation:
 
 + show them the page again, with the form fields as the user filled them in
 + add ‘Error: ’ to the beginning of the page `<title>` so screen readers read it out as soon as possible
-+ show an [error summary](../components/error-summary/) at the top of the page
-+ show [error messages](../components/error-messages/) next to fields with errors
++ show an [error summary](/components/error-summary) at the top of the page
++ show [error messages](/components/error-messages) next to fields with errors
 
-Read guidance on [writing good error messages](../error-message#be-clear-and-concise).
+Read guidance on [writing good error messages](/components/error-message#be-clear-and-concise).
 
 Show the error messages when they click the ‘continue’ or ‘submit’ button at the bottom of the page. Unless your user research tells you there’s a good reason to do so, avoid showing the error message:
 
