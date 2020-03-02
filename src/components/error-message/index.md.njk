@@ -15,17 +15,19 @@ Follow the [validation pattern](/patterns/validation/) and show the user an erro
 
 ## When to use this component
 
-Show an error message next to the field and in the [error summary](../error-summary/) when there is a validation error.
+Show an error message next to the field and in the [error summary](/components/error-summary/) when there is a validation error.
 
 Use standard messages for different components.
 
 ## When not to use this component
 
-Do not use error messages to tell users that they are not eligible or do not have permission to do something. Instead, take them to a screen that:
+Do not use error messages to tell users that they are not eligible or do not have permission to do something.  Instead, take them to a page which tells them they’re not eligible and gives them useful information about what to do next.
 
-- explains why we cannot accept the entry or selection
-- tells them what to do next
-- includes a way to leave the transaction
+There are separate patterns for:
+
+- [‘there is a problem with the service’ pages](/patterns/problem-with-the-service-pages/)
+- [‘page not found’ pages](/patterns/page-not-found-pages/)
+- [‘service unavailable’ pages](/patterns/service-unavailable-pages/)
 
 ## How it works
 
