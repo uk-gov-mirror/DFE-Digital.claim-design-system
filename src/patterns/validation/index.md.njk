@@ -14,8 +14,8 @@ Check the information the user gives you to make sure it’s valid. If there's a
 
 Validation should be a last resort. Minimise your chances of needing to show an error message by:
 
-[making sure your questions are well designed](https://www.gov.uk/service-manual/design/designing-good-questions)
-accepting information in different formats as long - as it’s not ambiguous (for example, you should accept postcodes with or without spaces - or names with non-alphabetical characters like accents)
++ [making sure your questions are well designed](https://www.gov.uk/service-manual/design/designing-good-questions)
++ accepting information in different formats as long - as it’s not ambiguous (for example, you should accept postcodes with or without spaces - or names with non-alphabetical characters like accents)
 
 But even if you design your questions well, you’ll sometimes get answers you can’t use. Use validation to detect when this happens, so you can show the user an error message that helps them to fix the problem.
 
@@ -25,17 +25,17 @@ Do not use validation to check whether the user is eligible to use the service o
 
 There are separate patterns for:
 
-[‘there is a problem with the service’ pages](/patterns/problem-with-the-service-pages/)
-[‘page not found’ pages](/patterns/page-not-found-pages/)
-[‘service unavailable’ pages](/patterns/service-unavailable-pages/)
++ [‘there is a problem with the service’ pages](/patterns/problem-with-the-service-pages/)
++ [‘page not found’ pages](/patterns/page-not-found-pages/)
++ [‘service unavailable’ pages](/patterns/service-unavailable-pages/)
 
 ## How it works
 
 Validation should refuse to accept:
 
-information that can’t be correct
-information that’s too ambiguous for you to use
-missing information, if the information is required
++ information that can’t be correct
++ information that’s too ambiguous for you to use
++ missing information, if the information is required
 
 For example, if you’re asking for someone’s date of birth you shouldn’t accept ‘13’ in the month field.
 
@@ -43,10 +43,10 @@ For example, if you’re asking for someone’s date of birth you shouldn’t ac
 
 If the user's answers fail validation:
 
-show them the page again, with the form fields as the user filled them in
-add ‘Error: ’ to the beginning of the page `<title>` so screen readers read it out as soon as possible
-show an [error summary](/components/error-summary/) at the top of the page
-show [error messages](/components/error-messages/) next to fields with errors
++ show them the page again, with the form fields as the user filled them in
++ add ‘Error: ’ to the beginning of the page `<title>` so screen readers read it out as soon as possible
++ show an [error summary](/components/error-summary/) at the top of the page
++ show [error messages](/components/error-message/) next to fields with errors
 
 Read guidance on [writing good error messages](/error-message#be-clear-and-concise).
 
@@ -54,7 +54,7 @@ Read guidance on [writing good error messages](/error-message#be-clear-and-conci
 
 Do not validate when the user moves away from a field. Wait until they try to move to the next part of the service - usually by clicking the ‘continue’ or ‘submit’ button at the bottom of the page.
 
-To start with, avoid validating the information in a field while the user is still typing it in. This sort of validation can cause problems - especially for users who type more slowly.
+Generally speaking, avoid validating the information in a field before the user has finished entering it. This sort of validation can cause problems - especially for users who type more slowly.
 
 Only add this sort of validation if your user research shows that, on balance, it solves more problems for users than it causes. For example, the [character count component](/components/character-count/) shows users an error message when they go over the character limit. Because it’s important that users do not spend time and effort writing out a response that turns out to be too long.
 
