@@ -1,5 +1,6 @@
 ---
-title: School taught at
+title: The school they are employed at
+
 description: Help users find a school in England
 section: Patterns
 theme: Ask users for…
@@ -59,8 +60,14 @@ Say ‘No results match that search term. Try again.’
 ## Research on this pattern
 
 Research on this pattern is limited. We've done some testing which indicates it
-is usable and accessible, but we've also included an [option for users who are
-unable to use JavaScript](../school-search-non-js-fallback).
+is usable and accessible, but we've also included an option for users who are
+unable to use JavaScript.
+
+### Without javascript search results option
+
+When users are unable to use JavaScript search results should be styled like this:
+
+{{ example({group: "patterns", item: "school-search", example: "with-search-results", html: true, nunjucks: true, open: false, size: "xl"}) }}
 
 ### Employed to teach vs employed at
 
@@ -99,5 +106,3 @@ as by address or postcode as well as name.
 
 You might also consider ignoring apostrophes and other punctuation in the
 search.
-
-
