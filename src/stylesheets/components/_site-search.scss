@@ -83,8 +83,8 @@ $icon-size: 40px;
   }
 
   .app-site-search__input--focused {
-    outline: 3px solid $govuk-focus-colour;
-    outline-offset: -2px;
+    border: $govuk-border-width-form-element solid $govuk-focus-text-colour;
+    outline: $govuk-focus-width solid $govuk-focus-colour;
   }
 
   .app-site-search__input--show-all-values {
