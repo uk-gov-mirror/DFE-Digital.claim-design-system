@@ -85,6 +85,7 @@ $icon-size: 40px;
   .app-site-search__input--focused {
     border: $govuk-border-width-form-element solid $govuk-focus-text-colour;
     outline: $govuk-focus-width solid $govuk-focus-colour;
+    outline-offset: 0;
   }
 
   .app-site-search__input--show-all-values {
