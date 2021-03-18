@@ -65,19 +65,23 @@ You can add hints to checkbox items to provide additional information about the 
 
 {{ example({group: "components", item: "checkboxes", example: "hint", html: true, nunjucks: true, open: false, size: "s"}) }}
 
-### Conditionally revealing content
+### Conditionally revealing a related question
 
-You can conditionally reveal content when the user selects a particular checkbox, so they only see content when it’s relevant to them.
+You can ask the user a related question when they select a particular checkbox, so they only see the question when it's relevant to them.
 
-For example, you could reveal a phone number input when the user selects the 'Contact me by phone' option.
+This might make two related questions easier to answer by grouping them on the same page. For example, you could reveal a phone number input when the user selects the 'Contact me by phone' option.
 
 {{ example({group: "components", item: "checkboxes", example: "conditional-reveal", html: true, nunjucks: true, open: false, size: "xl"}) }}
 
-Keep it simple - if you need to add a lot of content, consider showing it on the next page in the process instead.
+Keep it simple. If the related question is complicated or has more than one part, show it on the next page in the process instead.
+
+Conditionally reveal questions only - do not show or hide anything that is not a question.
 
 #### Known issues
 
-Users are not always notified when conditionally revealed content is expanded or collapsed. This fails [WCAG 2.1 success criterion 4.1.2 Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html). We plan to fix this issue by the end of June 2021.
+Users are not always notified when a conditionally revealed question is shown or hidden. This fails [WCAG 2.1 success criterion 4.1.2 Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html).
+
+However, we found that screen reader users did not have difficulty answering a conditionally revealed question - as long it’s kept simple. Users we tested with did get confused when complicated questions were conditionally revealed to them, particularly questions with more than one part.
 
 ### Smaller checkboxes
 
