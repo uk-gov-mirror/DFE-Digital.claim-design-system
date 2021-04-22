@@ -46,7 +46,7 @@ Show the cookie banner every time the user accesses your service until they eith
 
 Once the user has accepted or rejected cookies, the cookie banner should:
 - hide the cookie banner message
-- show the confirmation message - and a 'hide' button to let the user close the banner
+- show a confirmation message - and a 'hide' button to let the user close the banner
 - set a cookie to save the user’s preferences for 1 year
 
 Make sure the cookie banner does not:
@@ -71,7 +71,7 @@ All users will be able to see the banner as this approach does not rely on JavaS
 
 **[code example - cookie question - server side with no additional messages]**
 
-Once the user has accepted or rejected cookies and set their cookie preferences, reload the page to show the confirmation message:
+Once the user has accepted or rejected cookies and set their cookie preferences, reload the page to show a confirmation message:
 
 **[code example - cookie confirmation - server side with no additional messages]**
 
@@ -99,9 +99,9 @@ Include all possible messages that the user could see in the cookie banner when 
 
 Write your own JavaScript code to make your banner:
 - hide the cookie message by adding the hidden attribute
-- unhide the replacement message by removing the hidden attribute
-- give the replacement message the `tabindex="-1"` and `role="alert"` attributes - this will allow the element to be focused so assistive technology can read the message
-- shift focus to the replacement message
+- unhide a confirmation message by removing its hidden attribute
+- give the confirmation message the `tabindex="-1"` and `role="alert"` attributes - this will allow the element to be focused so assistive technology can read the message
+- shift focus to the confirmation message
 
 Here’s an example:
 
@@ -109,7 +109,7 @@ Here’s an example:
 
 #### When the user has accepted cookies
 
-Unhide a replacement message confirming that the user has either accepted or rejected cookies by removing the `hidden` attribute.
+Unhide a confirmation message confirming that the user has either accepted or rejected cookies by removing the `hidden` attribute.
 
 {{ example({group: "components", item: "cookie-banner", example: "accepted", html: true, nunjucks: true, open: false}) }}
 
@@ -149,15 +149,15 @@ You can use this example text for a service that set:
 
 You’ll need a [cookies page](/patterns/cookies-page/) as well as a cookie banner.
 
-When the user sets or changes their cookie preferences using the controls on the cookies page (rather than in the cookie banner), display this version of the replacement message. This is so they can get back to the page they were looking at.
+When the user sets or changes their cookie preferences using the controls on the cookies page (rather than in the cookie banner), display this version of the confirmation message. This is so they can get back to the page they were looking at.
 
 ## Research on this component
 
-When the user accepts or rejects cookies, a replacement message will display. For example, "Your cookie preferences have been saved." The focus also shifts to this new message.
+When the user accepts or rejects cookies, a confirmation message will display. For example, "Your cookie preferences have been saved." The focus also shifts to this new message.
 
-However, a visible focus indicator does not display around the replacement message. This is different from the notification banner, which does display a visible focus indicator.
+However, a visible focus indicator does not display around the confirmation message. This is different from the notification banner, which does display a visible focus indicator.
 
-We decided to remove the visible focus indicator from the replacement message for a few reasons, as:
+We decided to remove the visible focus indicator from the confirmation message for a few reasons, as:
 - a user cannot interact with it
 - it's the first element, at the very top of the page
 - it displays in place of the cookie message, which is the last thing the user interacted with
