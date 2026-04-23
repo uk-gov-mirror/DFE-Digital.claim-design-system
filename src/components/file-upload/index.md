@@ -108,6 +108,26 @@ This example shows you how to enable the improved File upload component:
 
 {{ example({ group: "components", item: "file-upload", example: "enhanced", html: true, nunjucks: true, open: false, size: "m" }) }}
 
+### About HTML attributes
+
+Some of the HTML attributes do not work as expected.
+
+The JavaScript that creates this version only copies a few of the attributes from the original input. These are:
+- `id`
+- `disabled`
+- `multiple`
+- `aria-describedby`
+
+Some attributes work on the original input, such as:
+- `name`
+- `accept`
+- `capture`
+- `accesskey`
+
+To add other attributes to the improved version, you'll have to either add them to the parent `div` or via JavaScript to the button.
+
+Screen readers will not read out the `required` attribute in the improved version. Although we [recommend not to use that attribute](/patterns/validation/#turn-off-html5-validation).
+
 ### Changes in the improved component
 
 To make it easier for users to drag and drop files, we’ve made the drop zone:
